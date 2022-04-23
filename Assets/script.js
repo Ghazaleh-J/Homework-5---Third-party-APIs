@@ -12,16 +12,29 @@ for (var i = 0; i < hour.length ; i++ ) {
     var hourContainer = document.createElement("div");
     var todoContainer = document.createElement("textarea");
     var saveBtn = document.createElement("button");
-    
+    var textClass = checkTime(hour[i].split(":")[0]); 
     hourContainer.innerText = hour[i];
-    
     saveBtn.innerText = ("Save");
     wrapContainer.setAttribute("class", "row time-block");
     hourContainer.setAttribute("class", "hour col-1");
-   
+    todoContainer.setAttribute("class", textClass);
     saveBtn.setAttribute("class", "btn saveBtn col-1");
     wrapContainer.append(hourContainer, todoContainer,saveBtn);
     mainContainer.append(wrapContainer);
+}
+
+// Check if the current time is past, present or future & give them different class
+function checkTime (rowHour) {
+  var currentHour = new Date().getHours();
+  if (currentHour == rowHour) {
+      return "present description col-10";
+  }
+  else if (currentHour < rowHour) {
+      return "future description col-10"
+  }
+  else {
+      return "past description col-10"
+  }
 }
 
 
