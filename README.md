@@ -15,6 +15,10 @@ Criteria:
 - text for that event is saved in local storage
 - the saved events persist after refreshing the page
 
+The deployed page on Github: 
+
+https://ghazaleh-j.github.io/Homework-5---Third-party-APIs/
+
 Site Preview:
 
 
