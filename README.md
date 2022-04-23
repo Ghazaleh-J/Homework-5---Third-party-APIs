@@ -17,5 +17,5 @@ Criteria:
 
 Site Preview:
 
-./preview.png
+
 
