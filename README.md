@@ -21,5 +21,6 @@ https://ghazaleh-j.github.io/Homework-5---Third-party-APIs/
 
 Site Preview:
 
+https://github.com/Ghazaleh-J/Homework-5---Third-party-APIs/blob/main/Assets/preview.png
 
 
