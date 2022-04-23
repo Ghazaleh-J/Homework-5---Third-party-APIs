@@ -14,6 +14,7 @@ for (var i = 0; i < hour.length ; i++ ) {
     var saveBtn = document.createElement("button");
     var textClass = checkTime(hour[i].split(":")[0]); 
     hourContainer.innerText = hour[i];
+    todoContainer.innerText = localStorage.getItem(hour[i]) 
     saveBtn.innerText = ("Save");
     wrapContainer.setAttribute("class", "row time-block");
     hourContainer.setAttribute("class", "hour col-1");
@@ -35,6 +36,18 @@ function checkTime (rowHour) {
   else {
       return "past description col-10"
   }
+}
+
+// Add click event listener, so when a block is clicked, grabs the value from that text area and saves it in local storage
+var clickedButtons = document.querySelectorAll(".saveBtn");
+
+for (var i = 0; i <clickedButtons.length; i++) {
+    clickedButtons[i].addEventListener("click", function(event){
+      var todoValue = event.target.previousSibling.value;
+      var todoKey = event.target.parentNode.firstChild.innerText;
+      // Store the data in local storage
+      localStorage.setItem(todoKey, todoValue);    
+    })
 }
 
 
